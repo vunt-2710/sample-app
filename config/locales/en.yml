@@ -30,4 +30,22 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  title:
+    default: "Ruby on Rails Tutorial Sample App"
+    home: "Home"
+    help: "Help"
+  navigation:
+    home: "Home"
+    help: "Help"
+    login: "Log in"
+  views:
+    home:
+      title: "Home"
+      subtitle: "This is the home page for the %{homePage} sample application."
+      signup: "Sign up now!"
+      linkTitle: "Ruby on Rails Tutorial"
+      helpPage: "Rails Tutorial help page"
+      bookPage: "Ruby on Rails Tutorial"
+    help:
+      title: "Help"
+      body: "Get help on the Ruby on Rails Tutorial at the %{helpPage}. To get help on this sample app, see the <em>%{bookPage}</em> book."
