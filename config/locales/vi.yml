@@ -1,0 +1,20 @@
+vi:
+  title:
+    default: "Ứng dụng mẫu Ruby on Rails"
+    home: "Trang chủ"
+    help: "Trợ giúp"
+  navigation:
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    login: "Đăng nhập"
+  views:
+    home:
+      title: "Trang chủ"
+      subtitle: "Đây là trang chủ của ứng dụng mẫu %{homePage}."
+      signup: "Đăng ký ngay!"
+      linkTitle: "Hướng dẫn Ruby on Rails"
+      helpPage: "Trang trợ giúp Rails Tutorial"
+      bookPage: "Hướng dẫn Ruby on Rails"
+    help:
+      title: "Trợ giúp"
+      body: "Tìm trợ giúp bạn cần trong %{helpPage}. Để xem trợ giúp cho ứng dụng mẫu này, hãy xem sách <em>%{bookPage}</em>."

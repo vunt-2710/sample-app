@@ -1,0 +1,8 @@
+<% provide :title, t("title.help") %>
+<h1><%= t "views.help.title" %></h1>
+<p>
+  <%= t("views.help.body",
+    helpPage: link_to(t("views.home.helpPage"), Settings.default.outsideLink.railsHelpPage),
+    bookPage: link_to(t("views.home.bookPage"), Settings.default.outsideLink.railsBook)
+  ).html_safe %>
+</p>

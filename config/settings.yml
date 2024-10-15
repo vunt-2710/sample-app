@@ -1,0 +1,19 @@
+default: &default
+  app_url: "http://localhost:3000"
+  static_pages:
+    home: "http://localhost:3000/static_pages/home"
+    help: "http://localhost:3000/static_pages/help"
+  outsideLink:
+    railsHomepage: "http://www.railstutorial.org"
+    railsHelpPage: "http://www.railstutorial.org/help"
+    railsBook: "http://www.railstutorial.org/book"
+
+development:
+  <<: *default
+
+# production:
+#   <<: *default
+#   app_url: 'https://sample-app.com'
+#   static_pages:
+#     home: 'http://localhost:3000/static_pages/home'
+#     help: 'http://localhost:3000/static_pages/help'
