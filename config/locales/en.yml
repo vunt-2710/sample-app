@@ -34,6 +34,7 @@ en:
     default: "Ruby on Rails Tutorial Sample App"
     home: "Home"
     help: "Help"
+    signup: "Sign Up"
   navigation:
     home: "Home"
     help: "Help"
@@ -49,3 +50,18 @@ en:
     help:
       title: "Help"
       body: "Get help on the Ruby on Rails Tutorial at the %{helpPage}. To get help on this sample app, see the <em>%{bookPage}</em> book."
+    signup:
+      createButton: "Create my account"
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        confirmaton: "Password Confirmation"
+  error: "error"
+  flash:
+    success: "Account created successfully!"
+    warning: "Not found user!"

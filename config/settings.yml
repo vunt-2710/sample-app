@@ -3,6 +3,7 @@ default: &default
   static_pages:
     home: "http://localhost:3000/static_pages/home"
     help: "http://localhost:3000/static_pages/help"
+  signup: "http://localhost:3000/signup"
   outsideLink:
     railsHomepage: "http://www.railstutorial.org"
     railsHelpPage: "http://www.railstutorial.org/help"

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  PERMITTED_PARAMS = [:name, :email, :password, :password_confirmation].freeze
+  
   before_save :downcase_email
 
   validates :name,

@@ -4,5 +4,5 @@
   <h2>
     <%= t("views.home.subtitle", homePage: link_to(t("views.home.linkTitle"), Settings.default.outsideLink.railsHomepage)).html_safe %>
   </h2>
-  <%= link_to t("views.home.signup"), '#', class: "btn btn-lg btn-primary" %>
+  <%= link_to t("views.home.signup"), Settings.default.signup, class: "btn btn-lg btn-primary" %>
 </div>
