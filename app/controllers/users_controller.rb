@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user
 
-    flash[:warning] = I18n.t "flash.warning"
+    flash[:warning] = t "flash.warning"
     redirect_to root_path
   end
 
@@ -14,7 +14,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = I18n.t "flash.success"
+      flash[:success] = t "flash.success"
+      log_in @user
       redirect_to @user, status: :see_other
     else
       render :new, status: :unprocessable_entity

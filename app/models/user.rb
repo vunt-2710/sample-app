@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   PERMITTED_PARAMS = [:name, :email, :password, :password_confirmation].freeze
-  
+
   before_save :downcase_email
 
   validates :name,
@@ -13,6 +13,15 @@ class User < ApplicationRecord
                     uniqueness: {case_sensitive: false}
 
   has_secure_password
+
+  def self.digest string
+    cost = if ActiveModel::SecurePassword.min_cost
+             BCrypt::Engine::MIN_COST
+           else
+             BCrypt::Engine.cost
+           end
+    BCrypt::Password.create(string, cost:)
+  end
 
   private
 

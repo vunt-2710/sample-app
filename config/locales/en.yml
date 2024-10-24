@@ -35,10 +35,16 @@ en:
     home: "Home"
     help: "Help"
     signup: "Sign Up"
+    login: "Log in"
   navigation:
     home: "Home"
     help: "Help"
     login: "Log in"
+    users: "Users"
+    profile: "Profile"
+    settings: "Settings"
+    logout: "Log out"
+    account: "Account"
   views:
     home:
       title: "Home"
@@ -52,6 +58,12 @@ en:
       body: "Get help on the Ruby on Rails Tutorial at the %{helpPage}. To get help on this sample app, see the <em>%{bookPage}</em> book."
     signup:
       createButton: "Create my account"
+    signIn:
+      submit: "Log in"
+      newUser: "New user?"
+      signUpNow: "Sign up now!"
+      error:
+        wrongCredentials: "Invalid email or password!"
   activerecord:
     models:
       user: "User"
@@ -65,3 +77,4 @@ en:
   flash:
     success: "Account created successfully!"
     warning: "Not found user!"
+    loginSuccess: "Login successfully!"

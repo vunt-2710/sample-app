@@ -4,10 +4,16 @@ vi:
     home: "Trang chủ"
     help: "Trợ giúp"
     signup: "Đăng ký"
+    login: "Đăng nhập"
   navigation:
     home: "Trang chủ"
     help: "Trợ giúp"
     login: "Đăng nhập"
+    users: "Người dùng"
+    profile: "Trang cá nhân"
+    settings: "Cài đặt"
+    logout: "Đăng xuất"
+    account: "Tài khoản"
   views:
     home:
       title: "Trang chủ"
@@ -21,6 +27,12 @@ vi:
       body: "Tìm trợ giúp bạn cần trong %{helpPage}. Để xem trợ giúp cho ứng dụng mẫu này, hãy xem sách <em>%{bookPage}</em>."
     signup:
       createButton: "Tạo tài khoản"
+    signIn:
+      submit: "Đăng nhập"
+      newUser: "Người dùng mới?"
+      signUpNow: "Đăng ký ngay!"
+      error:
+        wrongCredentials: "Email hoặc mật khẩu không đúng!"
   activerecord:
     models:
       user: "Người dùng"
@@ -48,3 +60,4 @@ vi:
   flash:
     success: "Tạo tài khoản thành công!"
     warning: "Không tìm thấy người dùng!"
+    loginSuccess: "Đăng nhập thành công!"
