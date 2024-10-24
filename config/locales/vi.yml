@@ -31,6 +31,7 @@ vi:
       submit: "Đăng nhập"
       newUser: "Người dùng mới?"
       signUpNow: "Đăng ký ngay!"
+      rememberMe: "Ghi nhớ đăng nhập?"
       error:
         wrongCredentials: "Email hoặc mật khẩu không đúng!"
   activerecord:
