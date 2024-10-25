@@ -4,18 +4,28 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by email: params.dig(:session, :email)&.downcase
     if user&.authenticate params.dig(:session, :password)
-      reset_session
-      log_in user
-      redirect_to user, status: :see_other
-      flash[:success] = t "flash.loginSuccess"
+      handle_success(user)
     else
-      flash.now[:danger] = t "views.signIn.error.wrongCredentials"
-      render :new, status: :unprocessable_entity
+      handle_fail
     end
   end
 
   def destroy
     log_out
     redirect_to root_path, status: :see_other
+  end
+
+  def handle_success user
+    forwarding_url = session[:forwarding_url]
+    reset_session
+    log_in user
+    params.dig(:session, :remember_me) == "1" ? remember(user) : forget(user)
+    flash[:success] = t "flash.loginSuccess"
+    redirect_to forwarding_url || user, status: :see_other
+  end
+
+  def handle_fail
+    flash.now[:danger] = t "views.signIn.error.wrongCredentials"
+    render :new, status: :unprocessable_entity
   end
 end

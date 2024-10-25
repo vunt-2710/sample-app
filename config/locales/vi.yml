@@ -31,8 +31,18 @@ vi:
       submit: "Đăng nhập"
       newUser: "Người dùng mới?"
       signUpNow: "Đăng ký ngay!"
+      rememberMe: "Ghi nhớ đăng nhập?"
       error:
         wrongCredentials: "Email hoặc mật khẩu không đúng!"
+    settings:
+      title: "Thông tin tài khoản"
+      header: "Cập nhật thông tin tài khoản"
+      saveButton: "Lưu thay đổi"
+      changeAvatarButton: "Đổi ảnh đại diện"
+    users:
+      title: "Tất cả người dùng"
+      deleteButton: "Xóa"
+      confirmPopup: "Bạn có chắc chắn muốn xóa người dùng này?"
   activerecord:
     models:
       user: "Người dùng"
@@ -61,3 +71,9 @@ vi:
     success: "Tạo tài khoản thành công!"
     warning: "Không tìm thấy người dùng!"
     loginSuccess: "Đăng nhập thành công!"
+    notFoundUser: "Không tìm thấy người dùng!"
+    updateSuccess: "Cập nhật thành công!"
+    notLoggedIn: "Vui lòng đăng nhập!"
+    notYourAccount: "Bạn không thể sửa thông tin của người khác!"
+    deleteSuccess: "Xóa người dùng thành công!"
+    deleteFail: "Có lỗi xảy ra khi xóa người dùng này!"
