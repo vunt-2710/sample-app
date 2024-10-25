@@ -62,6 +62,7 @@ en:
       submit: "Log in"
       newUser: "New user?"
       signUpNow: "Sign up now!"
+      rememberMe: "Remember me?"
       error:
         wrongCredentials: "Invalid email or password!"
   activerecord:
