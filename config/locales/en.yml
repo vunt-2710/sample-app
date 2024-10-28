@@ -65,6 +65,15 @@ en:
       rememberMe: "Remember me?"
       error:
         wrongCredentials: "Invalid email or password!"
+    settings:
+      title: "Edit User"
+      header: "Update your profile"
+      saveButton: "Save changes"
+      changeAvatarButton: "Change Profile Picture"
+    users:
+      title: "All users"
+      deleteButton: "Delete"
+      confirmPopup: "Are you sure to delete this user?"
   activerecord:
     models:
       user: "User"
@@ -79,3 +88,9 @@ en:
     success: "Account created successfully!"
     warning: "Not found user!"
     loginSuccess: "Login successfully!"
+    notFoundUser: "User not found!"
+    updateSuccess: "Update successfully!"
+    notLoggedIn: "Please log in!"
+    notYourAccount: "You can not edit this account!"
+    deleteSuccess: "User deleted successfully!"
+    deleteFail: "There were some errors deleting this user!"
