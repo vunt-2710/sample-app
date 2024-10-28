@@ -20,6 +20,8 @@ default: &default
   pagination:
     users: 10
   avatarSize: 50
+  resetToken:
+    expiration: 2
 
 development:
   <<: *default

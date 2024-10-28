@@ -64,8 +64,17 @@ en:
       newUser: "New user?"
       signUpNow: "Sign up now!"
       rememberMe: "Remember me?"
+      forgotPass: "Forgot password?"
       error:
         wrongCredentials: "Invalid email or password!"
+    forgotPass:
+      title: "Forgot Password"
+      submitButton: "Submit"
+    resetPass:
+      title: "Reset Password"
+      password: "Password"
+      confirmation: "Confirmation"
+      submitButton: "Update password"
     settings:
       title: "Edit User"
       header: "Update your profile"
@@ -83,7 +92,19 @@ en:
         name: "Name"
         email: "Email"
         password: "Password"
-        confirmaton: "Password Confirmation"
+        confirmation: "Password Confirmation"
+    errors:
+      user:
+        name:
+          blank: "can't be blank!"
+        email:
+          blank: "can't be blank!"
+          invalid: "is invalid!"
+        password:
+          blank: "can't be blank!"
+          diff: "and password confirmation don't match"
+        confirmation:
+          blank: "can't be blank!"
   error: "error"
   flash:
     success: "Account created successfully!"
@@ -99,9 +120,21 @@ en:
     unactivatedAccount: "Account not activated. Check your email for the activation link."
     activateSuccess: "Activated successfully!"
     activateFail: "Invalid activation link!"
+    sentResetToken: "Email sent with password reset instructions!"
+    emailNotFound: "Email address not found!"
+    unactivatedUser: "Please activate your account first!"
+    passwordResetTokenExpired: "Password reset token has expired!"
+    resetPassSuccess: "Reset password successfully!"
   mail:
     activateAccount:
       subject: "Account Activation"
       greeting: "Hi %{userName},"
       body: "Welcome to the Sample App! Click on the link below to activate your account:"
       activateText: "Activate"
+    resetPass:
+      subject: "Reset Password"
+      body:
+        p1: "To reset your password click the link below:"
+        p2: "This link will expire in two hours."
+        p3: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
+      resetText: "Reset password"
