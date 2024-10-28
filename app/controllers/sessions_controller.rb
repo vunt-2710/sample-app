@@ -16,12 +16,17 @@ class SessionsController < ApplicationController
   end
 
   def handle_success user
-    forwarding_url = session[:forwarding_url]
-    reset_session
-    log_in user
-    params.dig(:session, :remember_me) == "1" ? remember(user) : forget(user)
-    flash[:success] = t "flash.loginSuccess"
-    redirect_to forwarding_url || user, status: :see_other
+    if user.activated?
+      forwarding_url = session[:forwarding_url]
+      reset_session
+      log_in user
+      params.dig(:session, :remember_me) == "1" ? remember(user) : forget(user)
+      flash[:success] = t "flash.loginSuccess"
+      redirect_to forwarding_url || user, status: :see_other
+    else
+      flash[:warning] = t "flash.unactivatedAccount"
+      redirect_to root_path, status: :see_other
+    end
   end
 
   def handle_fail

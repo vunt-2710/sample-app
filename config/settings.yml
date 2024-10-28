@@ -12,6 +12,7 @@ default: &default
   email:
     format: "\\A[\\w+\\-.]+@[a-z\\d\\-.]+\\.[a-z]+\\z"
     maxLength: 256
+    fromEmail: "noreply@demomailtrap.com"
   userName:
     maxLength: 50
   password:
@@ -19,7 +20,6 @@ default: &default
   pagination:
     users: 10
   avatarSize: 50
-
 
 development:
   <<: *default
