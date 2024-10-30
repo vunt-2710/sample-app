@@ -30,6 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  appName: "Sample App"
   title:
     default: "Ruby on Rails Tutorial Sample App"
     home: "Home"
@@ -94,3 +95,13 @@ en:
     notYourAccount: "You can not edit this account!"
     deleteSuccess: "User deleted successfully!"
     deleteFail: "There were some errors deleting this user!"
+    needActivation: "Please check your email to activate your account!"
+    unactivatedAccount: "Account not activated. Check your email for the activation link."
+    activateSuccess: "Activated successfully!"
+    activateFail: "Invalid activation link!"
+  mail:
+    activateAccount:
+      subject: "Account Activation"
+      greeting: "Hi %{userName},"
+      body: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activateText: "Activate"
