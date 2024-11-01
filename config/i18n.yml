@@ -1,0 +1,7 @@
+---
+translations:
+  - file: app/javascript/locales/i18n.json
+    patterns:
+      - "en.*"
+      - "vi.*"
+      - "!*.faker.*"

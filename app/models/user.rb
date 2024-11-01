@@ -1,5 +1,8 @@
 class User < ApplicationRecord
   PERMITTED_PARAMS = [:name, :email, :password, :password_confirmation].freeze
+  RESET_PASSWORD_PARAMS = [:password, :password_confirmation].freeze
+
+  has_many :microposts, dependent: :destroy
 
   validates :name,
             presence: true,
@@ -15,12 +18,17 @@ class User < ApplicationRecord
   validates :password,
             presence: true,
             length: {minimum: Settings.default.password.minLength},
-            allow_nil: true
+            on: %i(create password_reset)
+
+  validates :password,
+            length: {minimum: Settings.default.password.minLength},
+            allow_nil: true,
+            on: :update
 
   before_save :downcase_email
   before_create :create_activation_digest
   has_secure_password
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
 
   class << self
     def new_token
@@ -60,6 +68,24 @@ class User < ApplicationRecord
 
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
+  end
+
+  def password_reset_token_expired?
+    reset_sent_at < Settings.default.resetToken.expiration.hours.ago
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns reset_digest: User.digest(reset_token),
+                   reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def feed
+    microposts.newest
   end
 
   private
