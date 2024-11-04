@@ -84,6 +84,15 @@ en:
       title: "All users"
       deleteButton: "Delete"
       confirmPopup: "Are you sure to delete this user?"
+    feed:
+      title: "Micropost Feed"
+      timestamp: "Posted %{time} ago."
+      delete: "Delete"
+      confirm: "Are you sure to delele this micropost?"
+      profileLink: "View my profile"
+      micropost:
+        placeholder: "Compose new micropost..."
+        postButton: "Post"
   activerecord:
     models:
       user: "User"
@@ -105,6 +114,9 @@ en:
           diff: "and password confirmation don't match"
         confirmation:
           blank: "can't be blank!"
+      image:
+        type: "must be jpeg, png or gif file!"
+        size: "must be smaller than 5MB!"
   error: "error"
   flash:
     success: "Account created successfully!"
@@ -125,6 +137,11 @@ en:
     unactivatedUser: "Please activate your account first!"
     passwordResetTokenExpired: "Password reset token has expired!"
     resetPassSuccess: "Reset password successfully!"
+    micropost:
+      createSuccess: "Micropost created successfully!"
+      deleteSuccess: "Micropost deleted successfully!"
+      deleteFail: "There was an error deleting micropost."
+      notYours: "You can delete your microposts only!"
   mail:
     activateAccount:
       subject: "Account Activation"

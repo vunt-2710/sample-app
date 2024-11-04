@@ -53,6 +53,15 @@ vi:
       title: "Tất cả người dùng"
       deleteButton: "Xóa"
       confirmPopup: "Bạn có chắc chắn muốn xóa người dùng này?"
+    feed:
+      title: "Bảng Tin"
+      timestamp: "Đăng %{time} trước."
+      delete: "Xóa"
+      confirm: "Bạn chắc chắn muốn xóa micropost này?"
+      profileLink: "Xem trang cá nhân"
+      micropost:
+        placeholder: "Tạo bài viết mới..."
+        postButton: "Đăng"
   activerecord:
     models:
       user: "Người dùng"
@@ -78,6 +87,9 @@ vi:
         blank: "không được để trống"
         too_short: "phải có ít nhất 6 ký tự!"
         confirmation: "không trùng với xác nhận mật khẩu!"
+      image:
+        type: "tệp phải có định dạng jpeg, png hoặc gif!"
+        size: "phải nhỏ hơn 5MB!"
   the_form_contains: "Mẫu chứa"
   error: "lỗi"
   flash:
@@ -99,6 +111,11 @@ vi:
     unactivatedUser: "Hãy kích hoạt tài khoản trước!"
     passwordResetTokenExpired: "Token đặt lại mật khẩu đã hết hạn!"
     resetPassSuccess: "Đặt lại mật khẩu thành công!"
+    micropost:
+      createSuccess: "Tạo micropost thành công!"
+      deleteSuccess: "Xóa micropost thành công!"
+      deleteFail: "Có lỗi xảy ra khi xóa micropost."
+      notYours: "Bạn chỉ có thể xóa được micropost của mình!"
   mail:
     activateAccount:
       subject: "Kích Hoạt Tài Khoản"

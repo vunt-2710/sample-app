@@ -1,8 +1,25 @@
 <% provide :title, t("title.home") %>
-<div class="center jumbotron">
-  <h1><%= t "views.home.title" %></h1>
-  <h2>
-    <%= t("views.home.subtitle", homePage: link_to(t("views.home.linkTitle"), Settings.default.outsideLink.railsHomepage)).html_safe %>
-  </h2>
-  <%= link_to t("views.home.signup"), Settings.default.signup, class: "btn btn-lg btn-primary" %>
-</div>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="micropost_form">
+        <%= render "shared/micropost_form" %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3><%= t "views.feed.title" %></h3>
+      <%= render "shared/feed" %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1><%= t "views.home.title" %></h1>
+    <h2>
+      <%= t("views.home.subtitle", homePage: link_to(t("views.home.linkTitle"), Settings.default.outsideLink.railsHomepage)).html_safe %>
+    </h2>
+    <%= link_to t("views.home.signup"), Settings.default.signup, class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>

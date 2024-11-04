@@ -19,10 +19,16 @@ default: &default
     minLength: 6
   pagination:
     users: 10
+    microposts: 5
   avatarSize: 50
   resetToken:
     expiration: 2
-
+  micropost:
+    maxLength: 255
+  image:
+    maxSize: 5 # MB
+    type: "image/jpeg, image/gif, image/png"
+    size: [500, 500]
 development:
   <<: *default
 

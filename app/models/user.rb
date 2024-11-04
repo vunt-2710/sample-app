@@ -2,6 +2,8 @@ class User < ApplicationRecord
   PERMITTED_PARAMS = [:name, :email, :password, :password_confirmation].freeze
   RESET_PASSWORD_PARAMS = [:password, :password_confirmation].freeze
 
+  has_many :microposts, dependent: :destroy
+
   validates :name,
             presence: true,
             length: {maximum: Settings.default.userName.maxLength}
@@ -80,6 +82,10 @@ class User < ApplicationRecord
 
   def send_password_reset_email
     UserMailer.password_reset(self).deliver_now
+  end
+
+  def feed
+    microposts.newest
   end
 
   private

@@ -10,6 +10,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by id: params[:id]
+    @pagy, @microposts = pagy @user.microposts.newest,
+                              limit: Settings.default.pagination.microposts
+    @microposts_count = @user.microposts.count
     return if @user
 
     flash[:warning] = t "flash.warning"
@@ -63,14 +66,6 @@ class UsersController < ApplicationController
 
     flash[:danger] = t "flash.notFoundUser"
     redirect_to root_path
-  end
-
-  def logged_in_user?
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "flash.notLoggedIn"
-    redirect_to login_url
   end
 
   def correct_user
