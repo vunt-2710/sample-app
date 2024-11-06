@@ -21,6 +21,7 @@ default: &default
     users: 10
     microposts: 5
   avatarSize: 50
+  avatarMini: 30
   resetToken:
     expiration: 2
   micropost:

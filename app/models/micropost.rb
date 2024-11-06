@@ -20,4 +20,5 @@ class Micropost < ApplicationRecord
                    message: I18n.t("activerecord.errors.image.size")}
 
   scope :newest, ->{order created_at: :desc}
+  scope :relate_post, ->(user_ids){where user_id: user_ids}
 end
