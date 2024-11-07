@@ -93,6 +93,14 @@ en:
       micropost:
         placeholder: "Compose new micropost..."
         postButton: "Post"
+      follow: "Follow"
+      unfollow: "Unfollow"
+    following:
+      title: "Following"
+      text: "following"
+    followers:
+      title: "Followers"
+      text: "followers"
   activerecord:
     models:
       user: "User"
